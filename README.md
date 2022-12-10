@@ -68,12 +68,12 @@ Fully automated and secured Terraform infra pipeline
             - Description: slack-token
             - Click on Create                
 
-    56)  #### Configure system:
-    - Click on Manage Jenkins --> Configure System
+        2)  #### Configure system:
+            - Click on Manage Jenkins --> Configure System
 
-        3)  - Go to section Slack
-            - Workspace: **devops-fully-automated** (if not working try with Team-subdomain devopsfullyau-r0x2686)
-            - Credentials: select the slack-token credentials (created above) from the drop-down    
+            1)  - Go to section Slack
+                - Workspace: **devops-fully-automated** (if not working try with Team-subdomain devopsfullyau-r0x2686)
+                - Credentials: select the slack-token credentials (created above) from the drop-down    
 
 
 ### GitHub webhook
