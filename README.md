@@ -43,7 +43,7 @@ Fully automated and secured Terraform infra pipeline
     - Click "Available"
     - Search and Install the following Plugings "Install Without Restart"        
         - **Slack Notification**
-    - Once all plugins are installed, select **Restart Jenkins when installation is complete and no jobs are running**
+
 
 
 3)  #### Pipeline creation
@@ -103,7 +103,7 @@ Once both the above steps are done click on Save.
         `git commit -m "relevant commit message"`
         `git push`
 
-1) #### Skipping all the checks on the Jenkins file comment the checkov scan lines accordingly with #
+2) #### Skipping all the checks on the Jenkins file comment the checkov scan lines accordingly with # (sure to shell)
 
 ## Finally observe the whole flow and understand the integrations :) 
 # Happy learning, everyone 😊 😊
