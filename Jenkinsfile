@@ -26,7 +26,7 @@ pipeline {
         stage('Terraform init') {
             steps {
                 echo 'Initiliazing terraform project...'
-                sh 'terraform init'
+                sh 'sudo terraform init'
                
             }
         }
@@ -35,7 +35,7 @@ pipeline {
         stage('Terraform validate') {
             steps {
                 echo 'Code syntax checking...'
-                sh 'terraform validate'
+                sh 'sudo terraform validate'
                
             }
         }
@@ -44,7 +44,7 @@ pipeline {
         stage('Terraform plan') {
             steps {
                 echo 'Terraform plan for the dry run...'
-                sh 'terraform plan'
+                sh 'sudo terraform plan'
                
             }
         }
