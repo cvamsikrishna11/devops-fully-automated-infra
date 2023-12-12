@@ -117,6 +117,6 @@ Once both the above steps are done click on Save.
         `git commit -m "relevant commit message"`
         `git push`
 
-2) #### Skipping all the checks on the Jenkins file comment the checkov scan lines accordingly with # (sure to shell)
+2) #### Terminate Jenkins EC2 instance
 
 # Happy learning, everyone 😊 😊
