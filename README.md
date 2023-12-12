@@ -105,4 +105,18 @@ Once both the above steps are done click on Save.
 2) #### Skipping all the checks on the Jenkins file comment the checkov scan lines accordingly with # (sure to shell)
 
 ## Finally observe the whole flow and understand the integrations :) 
+
+### Destroy the infra
+
+1) #### Once the flow is observed, lets destroy the infra with same code
+    - Go back to your local, open your "devops-fully-automated" project on VSCODE
+    - Open "Jenkinsfile" comment lines 59, 76-82 & uncomment lines 61, 84-90
+    - Save the changes in both files
+    - Finally push changes to repo
+        `git add .`
+        `git commit -m "relevant commit message"`
+        `git push`
+
+2) #### Skipping all the checks on the Jenkins file comment the checkov scan lines accordingly with # (sure to shell)
+
 # Happy learning, everyone 😊 😊
