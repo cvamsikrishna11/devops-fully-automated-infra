@@ -41,8 +41,8 @@ Testing teh webhook.....
 
 2)  #### Plugin installations:
     - Click on "Manage Jenkins"
-    - Click on "Plugin Manager"
-    - Click "Available"
+    - Click on "Plugins"
+    - Click "Available Plugins"
     - Search and Install the following Plugings "Install Without Restart"        
         - **Slack Notification**
 
@@ -62,20 +62,17 @@ Testing teh webhook.....
 
 
 4)  #### Credentials setup(Slack):
-    - Click on Manage Jenkins --> Manage Credentials --> Global credentials (unrestricted) --> Add Credentials
-        1)  ###### Slack secret token (slack-token)
+    1)  #### Configure slack credentials for the pipeline to post alerts on slack channel:
+        - Click on Manage Jenkins --> System
+        - Go to section Slack
+        - Workspace: **devopsfullyau-r0x2686** (if not working try with name of workspace devops-fully-automated)
+        - Credentials: Click on Add button to add new credentials
+            - Slack secret token (slack-token)
             - Kind: Secret text            
             - Secret: 3jrfd3GjdMac0dgcxJwcOgQU
             - ID: slack-token
             - Description: slack-token
-            - Click on Create                
-
-        2)  #### Configure system:
-            - Click on Manage Jenkins --> Configure System
-
-            1)  - Go to section Slack
-                - Workspace: **devops-fully-automated** (if not working try with Team-subdomain devopsfullyau-r0x2686)
-                - Credentials: select the slack-token credentials (created above) from the drop-down    
+            - Click on Create        
 
 
 ### GitHub webhook
