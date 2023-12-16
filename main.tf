@@ -16,7 +16,7 @@ module "ec2_dev" {
   key_pair_name = "vamsi-chunduru"
 }
 
-# module code to create the ec2 instance with user data
+# module code to create the ec2 instance with user data.
 module "ec2_stage" {
   source        = "./ec2"
   name          = "stage"
