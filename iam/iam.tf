@@ -39,7 +39,7 @@ resource "aws_iam_role" "iam_role" {
             "logs:DescribeLogStreams",
             "logs:CreateLogGroup",
             "logs:PutLogEvents"
-            
+
           ]
           Effect   = "Allow"
           Resource = "*"
