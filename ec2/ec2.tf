@@ -28,7 +28,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/16"]
   }
 
   ingress {
@@ -69,7 +69,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 
 resource "aws_instance" "web_server" {
   ami                    = "ami-0b0dcb5067f052a63"
-  instance_type          = "t2.micro"
+  instance_type          = "t3.small"
   key_name               = var.key_pair_name
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   user_data              = file("scripts/userdata.sh")
@@ -77,10 +77,10 @@ resource "aws_instance" "web_server" {
   tags                   = merge(var.tags, { Name = join("", [var.name, "-", "webserver"]) }, { Environment = var.name })
 
   # best practices as per checkov scanner
-  # monitoring    = true
-  # ebs_optimized = true
-  # root_block_device {
-  #   encrypted = true
-  # }
+  monitoring    = true
+  ebs_optimized = true
+   root_block_device {
+     encrypted = true
+   }
 
 }
